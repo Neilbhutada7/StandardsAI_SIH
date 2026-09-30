@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { allStandards, initialAnalyses } from '../data/mockData';
-import type { Analysis, ReviewDecision, Standard, Recommendation } from '../data/mockData';
+import type { Analysis, ReviewDecision, Standard } from '../data/mockData';
 
 interface AppState {
   standards: Standard[];

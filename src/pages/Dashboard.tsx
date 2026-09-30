@@ -4,7 +4,7 @@ import { useStore } from '../store/useStore';
 
 const Dashboard = () => {
   const navigate = useNavigate();
-  const { analyses, standards } = useStore();
+  const { analyses } = useStore();
   
   const pendingReviews = analyses.filter(a => a.reviewStatus === 'Pending').length;
 

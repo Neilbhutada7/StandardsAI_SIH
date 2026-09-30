@@ -51,7 +51,7 @@ const Layout = () => {
           <NavLink to="/dashboard" className={({isActive}) => `flex items-center gap-3 px-4 py-2 text-slate-300 font-medium text-sm hover:bg-white/10 hover:text-white transition-colors ${isActive ? 'bg-white/10 text-white' : ''}`}>
             <LayoutDashboard size={20} className="shrink-0" /> <span className={`${sidebarExpanded ? 'block' : 'hidden md:block'} truncate`}>Dashboard</span>
           </NavLink>
-          <NavLink to="/analysis/new" className={({isActive}) => `flex items-center gap-3 px-4 py-2 text-slate-300 font-medium text-sm hover:bg-white/10 hover:text-white transition-colors ${location.pathname.includes('/analysis') ? 'bg-white/10 text-white' : ''}`}>
+          <NavLink to="/analysis/new" className={() => `flex items-center gap-3 px-4 py-2 text-slate-300 font-medium text-sm hover:bg-white/10 hover:text-white transition-colors ${location.pathname.includes('/analysis') ? 'bg-white/10 text-white' : ''}`}>
             <FileSearch size={20} className="shrink-0" /> <span className={`${sidebarExpanded ? 'block' : 'hidden md:block'} truncate`}>New Analysis</span>
           </NavLink>
           <NavLink to="/history" className={({isActive}) => `flex items-center gap-3 px-4 py-2 text-slate-300 font-medium text-sm hover:bg-white/10 hover:text-white transition-colors ${isActive ? 'bg-white/10 text-white' : ''}`}>
