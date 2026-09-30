@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-primary text-text-primary font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-sm text-sm font-medium cursor-pointer border transition-colors;
+  }
+  .btn-primary {
+    @apply bg-accent text-white border-transparent hover:bg-accent-dark;
+  }
+  .btn-secondary {
+    @apply bg-white border-border text-text-primary hover:bg-primary;
+  }
+  
+  .card {
+    @apply bg-secondary border border-border rounded-md shadow-sm p-6;
+  }
+  .card-header {
+    @apply mb-4 pb-3 border-b border-border;
+  }
+  .card-title {
+    @apply text-lg font-semibold;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold;
+  }
+  .badge.success { @apply bg-status-success-bg text-status-success; }
+  .badge.warning { @apply bg-status-warning-bg text-status-warning; }
+  .badge.error { @apply bg-status-error-bg text-status-error; }
+  .badge.info { @apply bg-status-info-bg text-status-info; }
+
+  .input, .textarea, .select {
+    @apply w-full px-3 py-2 border border-border rounded-sm font-sans text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent-light;
+  }
+  
+  .table-container {
+    @apply overflow-x-auto;
+  }
+  table {
+    @apply w-full border-collapse;
+  }
+  th {
+    @apply text-left px-4 py-3 border-b-2 border-border text-text-secondary font-semibold text-xs uppercase tracking-wider;
+  }
+  td {
+    @apply px-4 py-3 border-b border-border text-sm;
+  }
+  tr:last-child td {
+    @apply border-b-0;
+  }
+  tr:hover td {
+    @apply bg-primary;
+  }
+}
