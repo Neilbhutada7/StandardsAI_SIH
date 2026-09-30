@@ -60,9 +60,9 @@ const Layout = () => {
           <NavLink to="/library" className={({isActive}) => `flex items-center gap-3 px-4 py-2 text-slate-300 font-medium text-sm hover:bg-white/10 hover:text-white transition-colors ${isActive || location.pathname.includes('/standards') ? 'bg-white/10 text-white' : ''}`}>
             <BookOpen size={20} className="shrink-0" /> <span className={`${sidebarExpanded ? 'block' : 'hidden md:block'} truncate`}>Standards Library</span>
           </NavLink>
-          <div className="flex items-center gap-3 px-4 py-2 text-slate-300 font-medium text-sm hover:bg-white/10 hover:text-white transition-colors cursor-pointer">
+          <NavLink to="/history" className={({isActive}) => `flex items-center gap-3 px-4 py-2 text-slate-300 font-medium text-sm hover:bg-white/10 hover:text-white transition-colors cursor-pointer`}>
             <FileText size={20} className="shrink-0" /> <span className={`${sidebarExpanded ? 'block' : 'hidden md:block'} truncate`}>Reports</span>
-          </div>
+          </NavLink>
           <NavLink to="/settings" className={({isActive}) => `flex items-center gap-3 px-4 py-2 text-slate-300 font-medium text-sm hover:bg-white/10 hover:text-white transition-colors ${isActive ? 'bg-white/10 text-white' : ''}`}>
             <Settings size={20} className="shrink-0" /> <span className={`${sidebarExpanded ? 'block' : 'hidden md:block'} truncate`}>Settings</span>
           </NavLink>
